@@ -10,7 +10,7 @@ import tkinter.messagebox
 #the window
 tk = Tk()
 tk.title("tic tac toe")
-tk.geometry("200x225")
+#tk.geometry("200x225")
 
 click = True
 
@@ -22,6 +22,28 @@ def turn(buttons):
     elif buttons["text"] == " " and click == False:
         buttons["text"] = "0"
         click = True
+
+    elif(button1["text"] == "X" and button2["text"] == "X" and button3["text"] == "X" or
+        button6["text"] == "X" and button5["text"] == "X" and button4["text"] == "X" or
+        button7["text"] == "X" and button8["text"] == "X" and button9["text"] == "X" or
+        button1["text"] == "X" and button4["text"] == "X" and button7["text"] == "X" or
+        button2["text"] == "X" and button5["text"] == "X" and button8["text"] == "X" or
+        button3["text"] == "X" and button6["text"] == "X" and button9["text"] == "X" or
+        button1["text"] == "X" and button5["text"] == "X" and button9["text"] == "X" or
+        button3["text"] == "X" and button5["text"] == "X" and button7["text"] == "X"):
+        tkinter.messagebox.showinfo("Player X Wins!")
+        quit
+
+    elif(button1["text"] == "0" and button2["text"] == "0" and button3["text"] == "0" or
+        button6["text"] == "0" and button5["text"] == "0" and button4["text"] == "0" or
+        button7["text"] == "0" and button8["text"] == "0" and button9["text"] == "0" or
+        button1["text"] == "0" and button4["text"] == "0" and button7["text"] == "0" or
+        button2["text"] == "0" and button5["text"] == "0" and button8["text"] == "0" or
+        button3["text"] == "0" and button6["text"] == "0" and button9["text"] == "0" or
+        button1["text"] == "0" and button5["text"] == "0" and button9["text"] == "0" or
+        button3["text"] == "0" and button5["text"] == "0" and button7["text"] == "0"):
+        tkinter.messagebox.showinfo("Player 0 Wins!")
+        quit
 
 '''
 #lines
