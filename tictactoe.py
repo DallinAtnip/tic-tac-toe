@@ -108,3 +108,5 @@ width = 8, command=lambda:turn(button9))
 button9.grid(row=2, column=2,sticky = S+N+E+W)'''
 
 tk.mainloop()
+
+#hi
